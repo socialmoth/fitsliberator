@@ -790,7 +790,7 @@ int *label_status;
     char new_label_rec_str [PDS_MAXLINE + 1];
     char new_file_rec_str [PDS_MAXLINE + 1];
     char *temp_str = NULL;
-    POINTER_INFO *pointer = NULL;
+    PDS_POINTER_INFO *pointer = NULL;
     long old_label_records = 0;
     long old_file_records;
     long new_file_records;
@@ -2412,7 +2412,7 @@ STRING_LIST *lab_get_all_values (label_ptr, object_class, object_name,
 
 /**********************************************************************
  *$Component                                                          *
- *   POINTER_INFO *lab_get_pointer (label_ptr, pointer_name,          *
+ *   PDS_POINTER_INFO *lab_get_pointer (label_ptr, pointer_name,          *
  *                                  pointer_position, label_status)   *
  *$Abstract                                                           *
  *    Gets a pointer value from a PDS label.                          *
@@ -2457,7 +2457,7 @@ STRING_LIST *lab_get_all_values (label_ptr, object_class, object_name,
  *        PDS_WARNING.                                                *
  *$Returns                                                            *
  *    pointer_info:                                                   *
- *        The pointer_info variable is the address of a POINTER_INFO  *
+ *        The pointer_info variable is the address of a PDS_POINTER_INFO  *
  *        structure, which contains information about a label pointer,*
  *        indicating the file it points to, the location of an object *
  *        within the file, the type of the location (record or bytes) *
@@ -2487,7 +2487,7 @@ STRING_LIST *lab_get_all_values (label_ptr, object_class, object_name,
  **********************************************************************/
 
 
-POINTER_INFO *lab_get_pointer (label_ptr, pointer_name, pointer_position,
+PDS_POINTER_INFO *lab_get_pointer (label_ptr, pointer_name, pointer_position,
                                label_status)
 
 AGGREGATE label_ptr;
@@ -2499,7 +2499,7 @@ int *label_status;
    char *temp = NULL;
    PARAMETER keyword_ptr = NULL;
    VALUE value_ptr;
-   POINTER_INFO *pointer_info = NULL;
+   PDS_POINTER_INFO *pointer_info = NULL;
 
 /** BEGIN **/
 
@@ -2518,7 +2518,7 @@ int *label_status;
       /** Initialize the pointer structure to default values             **/
       /*------------------------------------------------------------------*/
 
-      pointer_info = (POINTER_INFO *) malloc (sizeof (POINTER_INFO));
+      pointer_info = (PDS_POINTER_INFO *) malloc (sizeof (PDS_POINTER_INFO));
       Check_Malloc(pointer_info);
       strcpy (pointer_info -> name, pointer_name);
       pointer_info -> has_byte_loc = FALSE;
@@ -3920,7 +3920,7 @@ int *label_status;
  *        processing will not be allowed to move above the level of   *
  *        this object.                                                *
  *    pointer_info:                                                   *
- *        The pointer_info variable is the address of a POINTER_INFO  *
+ *        The pointer_info variable is the address of a PDS_POINTER_INFO  *
  *        structure, which contains information about a label pointer,*
  *        indicating the file it points to, the location of an object *
  *        within the file, the type of the location (record or bytes) *
@@ -3965,7 +3965,7 @@ int *label_status;
 LOGICAL lab_replace_pointer (label_ptr, pointer_info, label_status)
 
 AGGREGATE label_ptr;
-POINTER_INFO *pointer_info;
+PDS_POINTER_INFO *pointer_info;
 int *label_status;
 
 {

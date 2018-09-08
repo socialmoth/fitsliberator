@@ -115,9 +115,9 @@ LOGICAL lab_write_label (AGGREGATE, char *, LOGICAL, long, int *);
 LOGICAL lab_write_product_label (AGGREGATE, char *, char *, int, char *, int,
                                  long, char *);
 
-LOGICAL lab_replace_pointer (AGGREGATE, POINTER_INFO *, int *);
+LOGICAL lab_replace_pointer (AGGREGATE, PDS_POINTER_INFO *, int *);
 
-POINTER_INFO *lab_get_pointer (AGGREGATE, char *, int, int *);
+PDS_POINTER_INFO *lab_get_pointer (AGGREGATE, char *, int, int *);
 
 /*------------------------------------------------------------------------*/
 /* The following functions are obsolete, and should not be used by new    */
@@ -149,7 +149,7 @@ LOGICAL lab_exit ();
 AGGREGATE lab_find_object ();
 PARAMETER lab_find_parameter ();
 STRING_LIST *lab_get_all_values ();
-POINTER_INFO *lab_get_pointer ();
+PDS_POINTER_INFO *lab_get_pointer ();
 char *lab_get_value ();
 LOGICAL lab_has_messages ();
 PARAMETER lab_move_parameter ();

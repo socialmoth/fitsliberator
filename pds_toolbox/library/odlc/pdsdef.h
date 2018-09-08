@@ -294,8 +294,8 @@ typedef struct string_list
 
 
 	/*------------------------------------------------------------*/
-	/*  The POINTER_INFO typedef is used to store a single PDS    */
-	/*  pointer value from a PDS label.                           */
+	/*  The PDS_POINTER_INFO typedef is used to store a single    */
+	/*  PDS pointer value from a PDS label.                       */
 	/*------------------------------------------------------------*/
 
 typedef struct
@@ -305,7 +305,7 @@ typedef struct
    char file_name [PDS_MAXLINE + 1];
    LOGICAL is_attached;
    LOGICAL has_byte_loc;
-} POINTER_INFO;
+} PDS_POINTER_INFO;
 
 
 
