@@ -57,8 +57,7 @@
 #include "Environment.h"
 #include "TilePusher.h"
 
-#include <boost/thread.hpp>
-#include <boost/bind.hpp>
+#include <thread>
 
 using namespace FitsLiberator::Modelling;
 using namespace FitsLiberator;
@@ -158,9 +157,17 @@ Void FlowController::imageChanged( Int imageIndex, Int planeIndex, Bool newFile 
 
 	if ( Begin() )
 	{
-		
-		boost::thread worker(boost::bind(&FlowController::imageChanged_, this, imageIndex, 
-			planeIndex, newFile ));
+		// TODO: Fix one-shot worker thread usage
+		// This idiom of creating a thread and detaching it matches the behavior
+		// of boost::thread in Boost version 1.35, which is the Boost version
+		// that was used before converting to VS2017.
+		//
+		// Just having random threads running around doing stuff in the
+		// background does not seem like a good design, so that will have to
+		// fixed.
+		std::thread worker(&FlowController::imageChanged_, this, imageIndex,
+			planeIndex, newFile);
+		worker.detach();
 	}
 }
 Void FlowController::imageChanged_( Int imageIndex, Int planeIndex, Bool newFile )
@@ -366,7 +373,8 @@ Void FlowController::toggleFlip()
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::toggleFlip_, this ));
+		std::thread worker(&FlowController::toggleFlip_, this);
+		worker.detach();
 	}
 }
 
@@ -391,7 +399,8 @@ Void FlowController::resetFlip()
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::resetFlip_, this ));
+		std::thread worker(&FlowController::resetFlip_, this);
+		worker.detach();
 	}
 }
 
@@ -438,7 +447,8 @@ Void FlowController::stretchFunctionSelected( const StretchFunction f )
 
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind(&FlowController::stretchFunctionSelected_, this, f));
+		std::thread worker(&FlowController::stretchFunctionSelected_, this, f);
+		worker.detach();
 	}
 }
 
@@ -533,7 +543,8 @@ Void FlowController::setBackgroundLevel( Double level )
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind(&FlowController::setBackgroundLevel_, this, level));
+		std::thread worker(&FlowController::setBackgroundLevel_, this, level);
+		worker.detach();
 	}
 }
 
@@ -594,8 +605,9 @@ Void FlowController::setBackgroundPeakScaledPeakLevels( Double bg, Double pl, Do
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind(&FlowController::setBackgroundPeakScaledPeakLevels_,
-			this, bg, pl, sPl));
+		std::thread worker(&FlowController::setBackgroundPeakScaledPeakLevels_,
+			this, bg, pl, sPl);
+		worker.detach();
 	}
 }
 
@@ -693,7 +705,8 @@ Void FlowController::setPeakLevel( Double d )
 {
 	if ( Begin() )
 	{			
-		boost::thread worker(boost::bind(&FlowController::setPeakLevel_, this, d));
+		std::thread worker(&FlowController::setPeakLevel_, this, d);
+		worker.detach();
 	}
 }
 
@@ -746,7 +759,8 @@ Void FlowController::setRescaleFactor( Double d )
 	if ( Begin() )
 	{
 		//do the tough stuff in a separate thread
-		boost::thread worker(boost::bind(&FlowController::setRescaleFactor_, this, d));			
+		std::thread worker(&FlowController::setRescaleFactor_, this, d);
+		worker.detach();
 	}
 }
 
@@ -791,7 +805,8 @@ Void FlowController::defaultValues()
 {
     if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::defaultValues_, this ));
+		std::thread worker(&FlowController::defaultValues_, this);
+		worker.detach();
 	}
 }
 /**
@@ -870,7 +885,8 @@ Void FlowController::automaticBackgroundScale()
 {
     if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::automaticBackgroundScale_, this ));
+		std::thread worker(&FlowController::automaticBackgroundScale_, this);
+		worker.detach();
 	}
 }
 
@@ -938,7 +954,8 @@ Void FlowController::zoomRectangle( FitsLiberator::Rectangle& rect )
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::zoomRectangle_, this, rect ));
+		std::thread worker(&FlowController::zoomRectangle_, this, rect);
+		worker.detach();
 	}
 }
 
@@ -971,7 +988,8 @@ Void FlowController::fitToPreview()
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::fitToPreview_, this ));
+		std::thread worker(&FlowController::fitToPreview_, this);
+		worker.detach();
 	}
 	
 }
@@ -999,7 +1017,8 @@ Void FlowController::setUnityZoom()
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::setUnityZoom_, this ));
+		std::thread worker(&FlowController::setUnityZoom_, this);
+		worker.detach();
 	}
 }
 Void FlowController::setUnityZoom_()
@@ -1026,7 +1045,8 @@ Void FlowController::centerPreview()
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::centerPreview_, this ));
+		std::thread worker(&FlowController::centerPreview_, this);
+		worker.detach();
 	}
 }
 Void FlowController::centerPreview_()
@@ -1052,7 +1072,8 @@ Void FlowController::incrementZoom( FitsLiberator::Point p )
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::incrementZoom_, this, p ));
+		std::thread worker(&FlowController::incrementZoom_, this, p);
+		worker.detach();
 	}
 }
 Void FlowController::incrementZoom_( FitsLiberator::Point p )
@@ -1083,7 +1104,8 @@ Void FlowController::decrementZoom( FitsLiberator::Point p )
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::decrementZoom_, this, p ));
+		std::thread worker(&FlowController::decrementZoom_, this, p);
+		worker.detach();
 	}
 }
 
@@ -1117,7 +1139,8 @@ Void FlowController::setZoomIndex( Int index )
 {
 	if ( Begin() )
 	{
-		boost::thread worker(boost::bind( &FlowController::setZoomIndex_, this, index ));
+		std::thread worker(&FlowController::setZoomIndex_, this, index);
+		worker.detach();
 	}
 }
 Void FlowController::setZoomIndex_( Int index )
@@ -1144,11 +1167,6 @@ Void FlowController::setZoomIndex_( Int index )
 
 Void FlowController::movePreview( MovementVector vec )
 {
-/*	if ( Begin() )
-	{
-		boost::thread worker(boost::bind( &FlowController::movePreview_, this, vec ));
-	}
-*/
 	movePreview_( vec );
 }
 
@@ -1742,7 +1760,8 @@ Void FlowController::saveFile( Bool invokeEditor, String fileName )
 		if ( Begin() )
 		{
 			makeSession( &session );
-			boost::thread worker(boost::bind(&FlowController::saveFile_, this, fileName, invokeEditor ));			
+			std::thread worker(&FlowController::saveFile_, this, fileName, invokeEditor);
+			worker.detach();
 		}
 	}
 

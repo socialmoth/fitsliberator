@@ -379,7 +379,7 @@ inline double signof(double value) {
 	        {
         #endif // USE_OPENMP  
     	
-	    register double value;
+	    double value;
         switch(stretch.function) {
 		    case stretchLinear:
 			    #ifdef USE_OPENMP	

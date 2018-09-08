@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{1db50dc9-f477-491c-9ec7-6e37dc82f0b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Engine">
+      <UniqueIdentifier>{46630212-0184-44ad-b0ba-8a7b46266d93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Modelling">
+      <UniqueIdentifier>{a87fa808-c26c-42b1-9f79-223873c909cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Modelling\Controllers">
+      <UniqueIdentifier>{8e6788d2-5d02-4b2b-97c3-41170e1b644c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Modelling\Models">
+      <UniqueIdentifier>{04ef4476-a5a1-4042-a4b5-c66b0b09b8c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Modelling\Views">
+      <UniqueIdentifier>{67a14364-8cf3-46cb-913d-657d13a550d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Windows">
+      <UniqueIdentifier>{f854d980-c2b8-49e6-9bcb-66785a7298a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Windows\Views">
+      <UniqueIdentifier>{0792a7c8-af06-41d8-b154-b37435d29f36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Windows\Controls">
+      <UniqueIdentifier>{c002f142-ae69-4115-a313-bec4ff25dade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Windows\Dialogs">
+      <UniqueIdentifier>{22ec62ab-b38b-4d5c-99bd-29e1624f6ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Windows\Framework">
+      <UniqueIdentifier>{57eeff9a-33b3-4e37-85ee-18f9143eeae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Preferences">
+      <UniqueIdentifier>{204f9e60-ebc7-485c-8f63-f761b8037392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Cache">
+      <UniqueIdentifier>{5d353577-6c64-4b9a-8c90-c0e807395e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{0b3f4885-df7a-4725-ad0c-0aec0ec9f2a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Engine">
+      <UniqueIdentifier>{84e1c240-d9c4-4b10-9768-eabffc2e2468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modelling">
+      <UniqueIdentifier>{d56be577-4a86-4483-badd-36e0df03d68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modelling\Models">
+      <UniqueIdentifier>{1ff87d37-d217-42a3-bede-0a25369def1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modelling\Controllers">
+      <UniqueIdentifier>{f1783358-c99c-4fef-a069-0cea15adae87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Modelling\Views">
+      <UniqueIdentifier>{f8b3a9fb-134d-4b80-bc92-1fd492a9d9c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Windows">
+      <UniqueIdentifier>{e2575189-9dea-4a82-9414-1b29b8ccdc76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Windows\Framework">
+      <UniqueIdentifier>{aa8404be-ded0-4128-8401-233d005970d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Windows\Views">
+      <UniqueIdentifier>{9f3aa100-6fd4-4bef-9575-700c8eb467ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Windows\Controls">
+      <UniqueIdentifier>{95a6290e-3199-4b16-b174-4dc453aa786d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Windows\Dialogs">
+      <UniqueIdentifier>{f27c2118-5917-4a46-a50e-a726d25bac62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Preferences">
+      <UniqueIdentifier>{ad2537f2-c02e-463f-b18a-4cc70986cd7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Cache">
+      <UniqueIdentifier>{bd50cc52-b85b-40b2-97a8-45e98030a838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{efeafa9c-26fb-43d0-b9ae-b25c21a00af2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Icons">
+      <UniqueIdentifier>{e18c412d-47fa-4659-86ef-87ef2b78368e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Bitmaps">
+      <UniqueIdentifier>{9c8d5891-9f16-438e-a870-5c55e84b9ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Data">
+      <UniqueIdentifier>{beae2212-8a5c-4b8a-b1d2-84094e429f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Cursors">
+      <UniqueIdentifier>{0ad58c43-b8f1-4970-8081-23ce46f4d841}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\headers\Environment.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Exception.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\FitsBehavior.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\FitsLiberator.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\FitsSession.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Image.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Text.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\TextUtils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Types.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Version.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\FileLoader.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\FitsEngine.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\FitsImageCube.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\FitsImageReader.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\FitsMath.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\FitsStatisticsTools.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\Flip.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\ImageCube.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\ImageReader.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\ImageTile.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\ImportSettings.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\PdsImageCube.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\PdsImageReader.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\Plane.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\Stretch.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\TileControl.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\TilePusher.h">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Engine\WcsMapper.hpp">
+      <Filter>Headers\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\AccumulatingChangeManager.h">
+      <Filter>Headers\Modelling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\ModelFramework.h">
+      <Filter>Headers\Modelling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Observer.h">
+      <Filter>Headers\Modelling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Controllers\FlowController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\GlobalSettingsController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\HistogramController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Controllers\OptionsController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\PlaneController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\PreviewController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\PreviewListener.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\RepositoryController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\StatisticsController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\StretchController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\TaxonomyEditorController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\controllers\ToolController.h">
+      <Filter>Headers\Modelling\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\GlobalSettingsModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\HeaderModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\HistogramModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Models\MainModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Models\MetadataRule.hpp">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Models\OptionsModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\PixelValueModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\PlaneModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\PreviewModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Models\ProgressModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\RepositoryModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\StatisticsModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\StretchModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\TaxonomyEditorModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\models\ToolModel.h">
+      <Filter>Headers\Modelling\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\GlobalSettingsView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\HeaderView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\HistogramView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Views\MainView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\MappedTaxonomyEditorView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\Views\OptionsView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\PixelValueView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\PlaneView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\PreviewView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\RepositoryView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\StatisticsView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\StretchView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\TaxonomyEditorView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Modelling\views\ToolView.h">
+      <Filter>Headers\Modelling\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\DebugWindow.h">
+      <Filter>Headers\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\DispatchView.h">
+      <Filter>Headers\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsChangeManager.h">
+      <Filter>Headers\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsGlobalSettingsView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsHeaderView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsHistogramView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsMainView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsOptionsView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsPixelValueView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsPlaneView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsPreviewView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsRepositoryView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsStatisticsView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsStretchView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\WindowsToolView.h">
+      <Filter>Headers\Windows\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\BitmapButton.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\CanvasControl.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\DropdownButton.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\HistogramControl.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\MainSheet.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\NoSelectTextbox.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\NumericTextbox.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\PreviewControl.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\SliderControl.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\ToolbarControl.h">
+      <Filter>Headers\Windows\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\HeaderPage.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\HelpGuidePage.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\MainDialog.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\OptionsDialog.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\PreviewPage.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\RepositoryPage.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\TaxonomyEditor.h">
+      <Filter>Headers\Windows\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\AlphaWindow.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\ApplicationWindow.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\Button.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\ComboBox.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\Control.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\Dialog.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\DllMain.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\EventSink.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\Menu.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\MouseTracker.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\MoveTrackerSink.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\PropertyPage.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\PropertySheet.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\ResourceManager.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\RootWindow.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\SelectionTrackerSink.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\Textbox.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\TooltipManager.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Windows\Window.h">
+      <Filter>Headers\Windows\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Preferences\Preferences.h">
+      <Filter>Headers\Preferences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Preferences\SettingsTree.h">
+      <Filter>Headers\Preferences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\Preferences\XMLSettingsTree.h">
+      <Filter>Headers\Preferences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\cache\CacheHandler.h">
+      <Filter>Headers\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\cache\FitsCache.h">
+      <Filter>Headers\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\cache\FitsPreviewCache.h">
+      <Filter>Headers\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\cache\FitsStatisticsCache.h">
+      <Filter>Headers\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\cache\PreviewCacheHandler.h">
+      <Filter>Headers\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\headers\cache\StatisticsCacheHandler.h">
+      <Filter>Headers\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\resources\windows\Resources.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\Environment.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Exception.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Image.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\TextUtils.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\FileLoader.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\FitsEngine.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\FitsImageCube.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\FitsImageReader.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\FitsMath.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\FitsStatisticsTools.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\Flip.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\ImageCube.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\ImageReader.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\ImageTile.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\ImportSettings.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\PdsImageCube.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\PdsImageReader.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\Plane.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\Stretch.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\TileControl.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\TilePusher.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Engine\WcsMapper.cpp">
+      <Filter>Sources\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\AccumulatingChangeManager.cpp">
+      <Filter>Sources\Modelling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\ModelFrameWork.cpp">
+      <Filter>Sources\Modelling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Observer.cpp">
+      <Filter>Sources\Modelling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\GlobalSettingsModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\HeaderModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\HistogramModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Models\MainModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Models\MetadataRule.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Models\OptionsModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\PixelValueModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\PlaneModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\PreviewModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Models\ProgressModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\RepositoryModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\StatisticsModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\StretchModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\TaxonomyEditorModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\models\ToolModel.cpp">
+      <Filter>Sources\Modelling\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Controllers\FlowController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\GlobalSettingsController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\HistogramController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Controllers\OptionsController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\PlaneController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\PreviewController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\PreviewListener.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\RepositoryController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\StatisticsController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\StretchController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\TaxonomyEditorController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\controllers\ToolController.cpp">
+      <Filter>Sources\Modelling\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\GlobalSettingsView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\HeaderView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\HistogramView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Views\MainView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\Views\OptionsView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\PixelValueView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\PlaneView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\PreviewView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\RepositoryView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\StatisticsView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\StretchView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\TaxonomyEditorView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Modelling\views\ToolView.cpp">
+      <Filter>Sources\Modelling\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\DispatchView.cpp">
+      <Filter>Sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\StandardMain.cpp">
+      <Filter>Sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsChangeManager.cpp">
+      <Filter>Sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\AlphaWindow.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\ApplicationWindow.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\Button.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\ComboBox.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\Control.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\Dialog.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\Menu.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\MouseTracker.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\MoveTrackerSink.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\PropertyPage.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\PropertySheet.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\ResourceManager.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\RootWindow.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\SelectionTrackerSink.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\Textbox.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\TooltipManager.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\Window.cpp">
+      <Filter>Sources\Windows\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsGlobalSettingsView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsHeaderView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsHistogramView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsMainView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsPixelValueView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsPlaneView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsPreviewView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsRepositoryView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsStatisticsView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsStretchView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\WindowsToolView.cpp">
+      <Filter>Sources\Windows\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\BitmapButton.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\CanvasControl.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\DropdownButton.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\HistogramControl.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\MainSheet.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\NoSelectTextbox.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\NumericTextbox.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\PreviewControl.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\SliderControl.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\ToolbarControl.cpp">
+      <Filter>Sources\Windows\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\HeaderPage.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\HelpGuidePage.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\MainDialog.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\OptionsDialog.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\PreviewPage.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\RepositoryPage.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Windows\TaxonomyEditor.cpp">
+      <Filter>Sources\Windows\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Preferences\Preferences.cpp">
+      <Filter>Sources\Preferences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Preferences\SettingsTree.cpp">
+      <Filter>Sources\Preferences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\Preferences\XMLSettingsTree.cpp">
+      <Filter>Sources\Preferences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\cache\CacheHandler.cpp">
+      <Filter>Sources\Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\cache\FitsCache.cpp">
+      <Filter>Sources\Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\cache\FitsPreviewCache.cpp">
+      <Filter>Sources\Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\cache\FitsStatisticsCache.cpp">
+      <Filter>Sources\Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\cache\PreviewCacheHandler.cpp">
+      <Filter>Sources\Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\cache\StatisticsCacheHandler.cpp">
+      <Filter>Sources\Cache</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\..\resources\windows\FitsLiberator.manifest">
+      <Filter>Resources</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\windows\FitsLiberator.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\resources\windows\FitsLiberator.ico">
+      <Filter>Resources\Icons</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\MarkerRed.ico">
+      <Filter>Resources\Icons</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Slider-Black.ico">
+      <Filter>Resources\Icons</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Slider-Disabled.ico">
+      <Filter>Resources\Icons</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Slider-White.ico">
+      <Filter>Resources\Icons</Filter>
+    </Image>
+    <Image Include="..\..\resources\About.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Brush-Transparent.bmp">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Checkbox-Checked.bmp">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Checkbox-Empty.bmp">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Checkbox-Unchecked.bmp">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\fits_liberator_colour.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\throbber.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Toolbar-Hot-Flat.bmp">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Toolbar-Hot.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Toolbar-Normal-Flat.bmp">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\Toolbar-Normal.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\UseBlackLevel.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\UseBlackLevel.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\UseWhiteLevel.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+    <Image Include="..\..\resources\windows\UseWhiteLevel.png">
+      <Filter>Resources\Bitmaps</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\resources\CategoryDefinition.xml">
+      <Filter>Resources\Data</Filter>
+    </Xml>
+    <Xml Include="..\..\resources\MetadataDefinition.xml">
+      <Filter>Resources\Data</Filter>
+    </Xml>
+    <Xml Include="..\..\resources\MetadataPanel.xsl">
+      <Filter>Resources\Data</Filter>
+    </Xml>
+    <Xml Include="..\..\resources\MetadataDefinition.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\resources\HelpGuide.rtf">
+      <Filter>Resources\Data</Filter>
+    </None>
+    <None Include="..\..\resources\windows\cursorHand.cur">
+      <Filter>Resources\Cursors</Filter>
+    </None>
+    <None Include="..\..\resources\windows\cursorZoomIn.cur">
+      <Filter>Resources\Cursors</Filter>
+    </None>
+    <None Include="..\..\resources\windows\cursorZoomLimit.cur">
+      <Filter>Resources\Cursors</Filter>
+    </None>
+    <None Include="..\..\resources\windows\cursorZoomOut.cur">
+      <Filter>Resources\Cursors</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -50,13 +50,12 @@
 //   Davide De Martin
 //
 // =============================================================================
-#include <boost/regex.hpp>
-#include <boost/algorithm/string.hpp>
+#include <regex>
 
 #include "MetadataRule.hpp"
+#include "Text.hpp"
 
 using namespace std;
-using namespace boost::algorithm;
 
 using FitsLiberator::Modelling::HeaderSource;
 using FitsLiberator::Modelling::Rule;
@@ -111,9 +110,9 @@ SetRule* SetRule::Create( const TiXmlElement* definition ) {
 
 MapRule::MapRule( const string& keyword, const string& header ) 
   : super( keyword ) {
-	  
+
 	// Split the keyword list into its parts
-	split(headers, header, is_any_of("|"));
+	headers = split(header, '|');
 }
 
 MapRule* MapRule::Create( const TiXmlElement* definition ) {
@@ -140,7 +139,7 @@ VectorRule::VectorRule( const string& keyword, const string& header )
   : super( keyword ) {
 	
 	// Split the KEYWORD1;KEYWORD2;... string into its elements
-    split(headers, header, is_any_of(";"));
+    headers = split(header, ';');
 }
 
 VectorRule* VectorRule::Create( const TiXmlElement* definition ) {
@@ -192,9 +191,9 @@ TransformRule* TransformRule::Create( const TiXmlElement* definition ) {
 }
 
 string TransformRule::getValue( const HeaderSource& source ) const {
-	boost::regex e( match );
+	std::regex e( match );
 	string value = super::getValue( source );
-	if( boost::regex_match( value, e ) )
-		return boost::regex_replace( value, e, format );
+	if( std::regex_match( value, e ) )
+		return std::regex_replace( value, e, format );
 	return "";
 }

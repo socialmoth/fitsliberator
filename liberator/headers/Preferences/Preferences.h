@@ -63,8 +63,6 @@
 #define PREFERENCES_MAJOR_VERSION 1
 #define PREFERENCES_MINOR_VERSION 1
 
-using namespace std;
-
 namespace FitsLiberator {
 	namespace Preferences {
 		
@@ -78,11 +76,7 @@ namespace FitsLiberator {
 				FitsLiberator::FitsSession session;
 		};
 
-		#ifdef __GNUC__
-            typedef __gnu_cxx::hash_map<String, String> StringDictionary;
-        #else
-            typedef stdext::hash_map< String, String > StringDictionary;
-        #endif
+        typedef std::unordered_map<String, String> StringDictionary;
 
         using FitsLiberator::Engine::StretchFunction;
         using FitsLiberator::Engine::InitialGuess;
@@ -105,7 +99,7 @@ namespace FitsLiberator {
             // History options --------------------------------------------------------------------
 			Bool 	                    freeze;			///< State of freeze settings (enabled/disabled)
             FitsLiberator::FitsSession	freezeSession;	///< The session data for the latest opned file.
-			deque<FileSession *>  		loadedFiles;	///< A deque of the loaded files. Deque is used to beause it supports constant time insertion and removal of elements at the beginning of the sequence.
+			std::deque<FileSession *>  	loadedFiles;	///< A deque of the loaded files. Deque is used to beause it supports constant time insertion and removal of elements at the beginning of the sequence.
             StringDictionary            metaData;		///< Metadata saved values and tempaltes. 
 
             // Installation options ---------------------------------------------------------------

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DEE08B74-0539-42B7-B88D-C212C22A488D}</ProjectGuid>
+    <RootNamespace>FitsLiberator</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27924.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\binaries\</OutDir>
+    <IntDir>..\..\intermediate\$(Configuration)\</IntDir>
+    <LinkIncremental />
+    <TargetName>FitsLiberator</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\binaries\</OutDir>
+    <IntDir>..\..\intermediate\$(Configuration)\</IntDir>
+    <LinkIncremental />
+    <TargetName>FitsLiberator</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\headers;..\..\headers\Cache;..\..\headers\Engine;..\..\headers\Modelling;..\..\headers\Modelling\controllers;..\..\headers\Modelling\models;..\..\headers\Modelling\views;..\..\headers\Preferences;..\..\headers\Windows;..\..\headers\IO\;..\..\resources\;..\..\resources\windows;..\..\..\cfitsio\library;..\..\..\tinyxml\library;..\..\..\boost\library;..\..\..\pds_toolbox\library\lablib;..\..\..\pds_toolbox\library\lablib3;..\..\..\pds_toolbox\library\oal;..\..\..\pds_toolbox\library\odlc;..\..\..\tbb\include;..\..\..\libtiff\library\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WINDOWS;WIN32;ISOLATION_AWARE_ENABLED;DEBUG;_DEBUG;_WIN32_WINNT=0x501;TIXML_USE_STL;USE_OPENMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DiagnosticsFormat>Caret</DiagnosticsFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\resources;..\..\resources\windows;..\..\headers;..\..\intermediate;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cfitsio.lib;pds_toolbox.lib;tinyxml.lib;gdiplus.lib;version.lib;shlwapi.lib;libtiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\cfitsio\binaries;..\..\..\boost\binaries;..\..\..\tinyxml\binaries;..\..\..\pds_toolbox\binaries;..\..\..\tbb\ia32\vc9\lib;..\..\..\libtiff\library\libtiff;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)FitsLiberator.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <EntryPointSymbol />
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(OutDir)FitsLiberator.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\headers;..\..\headers\Cache;..\..\headers\Engine;..\..\headers\Modelling;..\..\headers\Modelling\controllers;..\..\headers\Modelling\models;..\..\headers\Modelling\views;..\..\headers\Preferences;..\..\headers\Windows;..\..\headers\IO\;..\..\resources\;..\..\resources\windows;..\..\..\cfitsio\library;..\..\..\tinyxml\library;..\..\..\boost\library;..\..\..\pds_toolbox\library\lablib;..\..\..\pds_toolbox\library\lablib3;..\..\..\pds_toolbox\library\oal;..\..\..\pds_toolbox\library\odlc;..\..\..\tbb\include;..\..\..\libtiff\library\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WINDOWS;WIN32;ISOLATION_AWARE_ENABLED;_WIN32_WINNT=0x501;USE_OPENMP;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DiagnosticsFormat>Caret</DiagnosticsFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\resources;..\..\resources\windows;..\..\headers;..\..\intermediate;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>cfitsio.lib;pds_toolbox.lib;tinyxml.lib;gdiplus.lib;version.lib;shlwapi.lib;libtiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\cfitsio\binaries;..\..\..\boost\binaries;..\..\..\tinyxml\binaries;..\..\..\pds_toolbox\binaries;..\..\..\tbb\ia32\vc9\lib;..\..\..\libtiff\library\libtiff;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <EntryPointSymbol />
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(OutDir)FitsLiberator.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\headers\cache\CacheHandler.h" />
+    <ClInclude Include="..\..\headers\cache\FitsCache.h" />
+    <ClInclude Include="..\..\headers\cache\FitsPreviewCache.h" />
+    <ClInclude Include="..\..\headers\cache\FitsStatisticsCache.h" />
+    <ClInclude Include="..\..\headers\cache\PreviewCacheHandler.h" />
+    <ClInclude Include="..\..\headers\cache\StatisticsCacheHandler.h" />
+    <ClInclude Include="..\..\headers\Engine\FileLoader.h" />
+    <ClInclude Include="..\..\headers\Engine\FitsEngine.h" />
+    <ClInclude Include="..\..\headers\Engine\FitsImageCube.hpp" />
+    <ClInclude Include="..\..\headers\Engine\FitsImageReader.hpp" />
+    <ClInclude Include="..\..\headers\Engine\FitsMath.h" />
+    <ClInclude Include="..\..\headers\Engine\FitsStatisticsTools.h" />
+    <ClInclude Include="..\..\headers\Engine\Flip.h" />
+    <ClInclude Include="..\..\headers\Engine\ImageCube.hpp" />
+    <ClInclude Include="..\..\headers\Engine\ImageReader.hpp" />
+    <ClInclude Include="..\..\headers\Engine\ImageTile.h" />
+    <ClInclude Include="..\..\headers\Engine\ImportSettings.h" />
+    <ClInclude Include="..\..\headers\Engine\PdsImageCube.hpp" />
+    <ClInclude Include="..\..\headers\Engine\PdsImageReader.hpp" />
+    <ClInclude Include="..\..\headers\Engine\Plane.h" />
+    <ClInclude Include="..\..\headers\Engine\Stretch.h" />
+    <ClInclude Include="..\..\headers\Engine\TileControl.h" />
+    <ClInclude Include="..\..\headers\Engine\TilePusher.h" />
+    <ClInclude Include="..\..\headers\Engine\WcsMapper.hpp" />
+    <ClInclude Include="..\..\headers\Environment.h" />
+    <ClInclude Include="..\..\headers\Exception.h" />
+    <ClInclude Include="..\..\headers\FitsBehavior.h" />
+    <ClInclude Include="..\..\headers\FitsLiberator.h" />
+    <ClInclude Include="..\..\headers\FitsSession.h" />
+    <ClInclude Include="..\..\headers\Image.h" />
+    <ClInclude Include="..\..\headers\Modelling\AccumulatingChangeManager.h" />
+    <ClInclude Include="..\..\headers\Modelling\Controllers\FlowController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\GlobalSettingsController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\HistogramController.h" />
+    <ClInclude Include="..\..\headers\Modelling\Controllers\OptionsController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\PlaneController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\PreviewController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\PreviewListener.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\RepositoryController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\StatisticsController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\StretchController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\TaxonomyEditorController.h" />
+    <ClInclude Include="..\..\headers\Modelling\controllers\ToolController.h" />
+    <ClInclude Include="..\..\headers\Modelling\ModelFramework.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\GlobalSettingsModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\HeaderModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\HistogramModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\Models\MainModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\Models\MetadataRule.hpp" />
+    <ClInclude Include="..\..\headers\Modelling\Models\OptionsModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\PixelValueModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\PlaneModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\PreviewModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\Models\ProgressModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\RepositoryModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\StatisticsModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\StretchModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\TaxonomyEditorModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\models\ToolModel.h" />
+    <ClInclude Include="..\..\headers\Modelling\Observer.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\GlobalSettingsView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\HeaderView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\HistogramView.h" />
+    <ClInclude Include="..\..\headers\Modelling\Views\MainView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\MappedTaxonomyEditorView.h" />
+    <ClInclude Include="..\..\headers\Modelling\Views\OptionsView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\PixelValueView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\PlaneView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\PreviewView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\RepositoryView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\StatisticsView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\StretchView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\TaxonomyEditorView.h" />
+    <ClInclude Include="..\..\headers\Modelling\views\ToolView.h" />
+    <ClInclude Include="..\..\headers\Preferences\Preferences.h" />
+    <ClInclude Include="..\..\headers\Preferences\SettingsTree.h" />
+    <ClInclude Include="..\..\headers\Preferences\XMLSettingsTree.h" />
+    <ClInclude Include="..\..\headers\Text.hpp" />
+    <ClInclude Include="..\..\headers\TextUtils.h" />
+    <ClInclude Include="..\..\headers\Types.h" />
+    <ClInclude Include="..\..\headers\Version.h" />
+    <ClInclude Include="..\..\headers\Windows\AlphaWindow.h" />
+    <ClInclude Include="..\..\headers\Windows\ApplicationWindow.h" />
+    <ClInclude Include="..\..\headers\Windows\BitmapButton.h" />
+    <ClInclude Include="..\..\headers\Windows\Button.h" />
+    <ClInclude Include="..\..\headers\Windows\CanvasControl.h" />
+    <ClInclude Include="..\..\headers\Windows\ComboBox.h" />
+    <ClInclude Include="..\..\headers\Windows\Control.h" />
+    <ClInclude Include="..\..\headers\Windows\DebugWindow.h" />
+    <ClInclude Include="..\..\headers\Windows\Dialog.h" />
+    <ClInclude Include="..\..\headers\Windows\DispatchView.h" />
+    <ClInclude Include="..\..\headers\Windows\DllMain.h" />
+    <ClInclude Include="..\..\headers\Windows\DropdownButton.h" />
+    <ClInclude Include="..\..\headers\Windows\EventSink.h" />
+    <ClInclude Include="..\..\headers\Windows\HeaderPage.h" />
+    <ClInclude Include="..\..\headers\Windows\HelpGuidePage.h" />
+    <ClInclude Include="..\..\headers\Windows\HistogramControl.h" />
+    <ClInclude Include="..\..\headers\Windows\MainDialog.h" />
+    <ClInclude Include="..\..\headers\Windows\MainSheet.h" />
+    <ClInclude Include="..\..\headers\Windows\Menu.h" />
+    <ClInclude Include="..\..\headers\Windows\MouseTracker.h" />
+    <ClInclude Include="..\..\headers\Windows\MoveTrackerSink.h" />
+    <ClInclude Include="..\..\headers\Windows\NoSelectTextbox.h" />
+    <ClInclude Include="..\..\headers\Windows\NumericTextbox.h" />
+    <ClInclude Include="..\..\headers\Windows\OptionsDialog.h" />
+    <ClInclude Include="..\..\headers\Windows\PreviewControl.h" />
+    <ClInclude Include="..\..\headers\Windows\PreviewPage.h" />
+    <ClInclude Include="..\..\headers\Windows\PropertyPage.h" />
+    <ClInclude Include="..\..\headers\Windows\PropertySheet.h" />
+    <ClInclude Include="..\..\headers\Windows\RepositoryPage.h" />
+    <ClInclude Include="..\..\headers\Windows\ResourceManager.h" />
+    <ClInclude Include="..\..\headers\Windows\RootWindow.h" />
+    <ClInclude Include="..\..\headers\Windows\SelectionTrackerSink.h" />
+    <ClInclude Include="..\..\headers\Windows\SliderControl.h" />
+    <ClInclude Include="..\..\headers\Windows\TaxonomyEditor.h" />
+    <ClInclude Include="..\..\headers\Windows\Textbox.h" />
+    <ClInclude Include="..\..\headers\Windows\ToolbarControl.h" />
+    <ClInclude Include="..\..\headers\Windows\TooltipManager.h" />
+    <ClInclude Include="..\..\headers\Windows\Window.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsChangeManager.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsGlobalSettingsView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsHeaderView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsHistogramView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsMainView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsOptionsView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsPixelValueView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsPlaneView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsPreviewView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsRepositoryView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsStatisticsView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsStretchView.h" />
+    <ClInclude Include="..\..\headers\Windows\WindowsToolView.h" />
+    <ClInclude Include="..\..\resources\windows\Resources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\cache\CacheHandler.cpp" />
+    <ClCompile Include="..\..\sources\cache\FitsCache.cpp" />
+    <ClCompile Include="..\..\sources\cache\FitsPreviewCache.cpp" />
+    <ClCompile Include="..\..\sources\cache\FitsStatisticsCache.cpp" />
+    <ClCompile Include="..\..\sources\cache\PreviewCacheHandler.cpp" />
+    <ClCompile Include="..\..\sources\cache\StatisticsCacheHandler.cpp" />
+    <ClCompile Include="..\..\sources\Engine\FileLoader.cpp" />
+    <ClCompile Include="..\..\sources\Engine\FitsEngine.cpp" />
+    <ClCompile Include="..\..\sources\Engine\FitsImageCube.cpp" />
+    <ClCompile Include="..\..\sources\Engine\FitsImageReader.cpp" />
+    <ClCompile Include="..\..\sources\Engine\FitsMath.cpp" />
+    <ClCompile Include="..\..\sources\Engine\FitsStatisticsTools.cpp" />
+    <ClCompile Include="..\..\sources\Engine\Flip.cpp" />
+    <ClCompile Include="..\..\sources\Engine\ImageCube.cpp" />
+    <ClCompile Include="..\..\sources\Engine\ImageReader.cpp" />
+    <ClCompile Include="..\..\sources\Engine\ImageTile.cpp" />
+    <ClCompile Include="..\..\sources\Engine\ImportSettings.cpp" />
+    <ClCompile Include="..\..\sources\Engine\PdsImageCube.cpp" />
+    <ClCompile Include="..\..\sources\Engine\PdsImageReader.cpp" />
+    <ClCompile Include="..\..\sources\Engine\Plane.cpp" />
+    <ClCompile Include="..\..\sources\Engine\Stretch.cpp" />
+    <ClCompile Include="..\..\sources\Engine\TileControl.cpp" />
+    <ClCompile Include="..\..\sources\Engine\TilePusher.cpp" />
+    <ClCompile Include="..\..\sources\Engine\WcsMapper.cpp" />
+    <ClCompile Include="..\..\sources\Environment.cpp" />
+    <ClCompile Include="..\..\sources\Exception.cpp" />
+    <ClCompile Include="..\..\sources\Image.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\AccumulatingChangeManager.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Controllers\FlowController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\GlobalSettingsController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\HistogramController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Controllers\OptionsController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\PlaneController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\PreviewController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\PreviewListener.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\RepositoryController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\StatisticsController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\StretchController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\TaxonomyEditorController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\controllers\ToolController.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\ModelFrameWork.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\GlobalSettingsModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\HeaderModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\HistogramModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Models\MainModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Models\MetadataRule.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Models\OptionsModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\PixelValueModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\PlaneModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\PreviewModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Models\ProgressModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\RepositoryModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\StatisticsModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\StretchModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\TaxonomyEditorModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\models\ToolModel.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Observer.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\GlobalSettingsView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\HeaderView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\HistogramView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Views\MainView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\Views\OptionsView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\PixelValueView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\PlaneView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\PreviewView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\RepositoryView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\StatisticsView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\StretchView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\TaxonomyEditorView.cpp" />
+    <ClCompile Include="..\..\sources\Modelling\views\ToolView.cpp" />
+    <ClCompile Include="..\..\sources\Preferences\Preferences.cpp" />
+    <ClCompile Include="..\..\sources\Preferences\SettingsTree.cpp" />
+    <ClCompile Include="..\..\sources\Preferences\XMLSettingsTree.cpp" />
+    <ClCompile Include="..\..\sources\TextUtils.cpp" />
+    <ClCompile Include="..\..\sources\Windows\AlphaWindow.cpp" />
+    <ClCompile Include="..\..\sources\Windows\ApplicationWindow.cpp" />
+    <ClCompile Include="..\..\sources\Windows\BitmapButton.cpp" />
+    <ClCompile Include="..\..\sources\Windows\Button.cpp" />
+    <ClCompile Include="..\..\sources\Windows\CanvasControl.cpp" />
+    <ClCompile Include="..\..\sources\Windows\ComboBox.cpp" />
+    <ClCompile Include="..\..\sources\Windows\Control.cpp" />
+    <ClCompile Include="..\..\sources\Windows\Dialog.cpp" />
+    <ClCompile Include="..\..\sources\Windows\DispatchView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\DropdownButton.cpp" />
+    <ClCompile Include="..\..\sources\Windows\HeaderPage.cpp" />
+    <ClCompile Include="..\..\sources\Windows\HelpGuidePage.cpp" />
+    <ClCompile Include="..\..\sources\Windows\HistogramControl.cpp" />
+    <ClCompile Include="..\..\sources\Windows\MainDialog.cpp" />
+    <ClCompile Include="..\..\sources\Windows\MainSheet.cpp" />
+    <ClCompile Include="..\..\sources\Windows\Menu.cpp" />
+    <ClCompile Include="..\..\sources\Windows\MouseTracker.cpp" />
+    <ClCompile Include="..\..\sources\Windows\MoveTrackerSink.cpp" />
+    <ClCompile Include="..\..\sources\Windows\NoSelectTextbox.cpp" />
+    <ClCompile Include="..\..\sources\Windows\NumericTextbox.cpp" />
+    <ClCompile Include="..\..\sources\Windows\OptionsDialog.cpp" />
+    <ClCompile Include="..\..\sources\Windows\PreviewControl.cpp" />
+    <ClCompile Include="..\..\sources\Windows\PreviewPage.cpp" />
+    <ClCompile Include="..\..\sources\Windows\PropertyPage.cpp" />
+    <ClCompile Include="..\..\sources\Windows\PropertySheet.cpp" />
+    <ClCompile Include="..\..\sources\Windows\RepositoryPage.cpp" />
+    <ClCompile Include="..\..\sources\Windows\ResourceManager.cpp" />
+    <ClCompile Include="..\..\sources\Windows\RootWindow.cpp" />
+    <ClCompile Include="..\..\sources\Windows\SelectionTrackerSink.cpp" />
+    <ClCompile Include="..\..\sources\Windows\SliderControl.cpp" />
+    <ClCompile Include="..\..\sources\Windows\StandardMain.cpp" />
+    <ClCompile Include="..\..\sources\Windows\TaxonomyEditor.cpp" />
+    <ClCompile Include="..\..\sources\Windows\Textbox.cpp" />
+    <ClCompile Include="..\..\sources\Windows\ToolbarControl.cpp" />
+    <ClCompile Include="..\..\sources\Windows\TooltipManager.cpp" />
+    <ClCompile Include="..\..\sources\Windows\Window.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsChangeManager.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsGlobalSettingsView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsHeaderView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsHistogramView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsMainView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsPixelValueView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsPlaneView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsPreviewView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsRepositoryView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsStatisticsView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsStretchView.cpp" />
+    <ClCompile Include="..\..\sources\Windows\WindowsToolView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\..\resources\windows\FitsLiberator.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\windows\FitsLiberator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\resources\About.png" />
+    <Image Include="..\..\resources\fits_liberator_colour.png" />
+    <Image Include="..\..\resources\throbber.png" />
+    <Image Include="..\..\resources\UseBlackLevel.png" />
+    <Image Include="..\..\resources\UseWhiteLevel.png" />
+    <Image Include="..\..\resources\windows\Brush-Transparent.bmp" />
+    <Image Include="..\..\resources\windows\Checkbox-Checked.bmp" />
+    <Image Include="..\..\resources\windows\Checkbox-Empty.bmp" />
+    <Image Include="..\..\resources\windows\Checkbox-Unchecked.bmp" />
+    <Image Include="..\..\resources\windows\FitsLiberator.ico" />
+    <Image Include="..\..\resources\windows\MarkerRed.ico" />
+    <Image Include="..\..\resources\windows\Slider-Black.ico" />
+    <Image Include="..\..\resources\windows\Slider-Disabled.ico" />
+    <Image Include="..\..\resources\windows\Slider-White.ico" />
+    <Image Include="..\..\resources\windows\Toolbar-Hot-Flat.bmp" />
+    <Image Include="..\..\resources\windows\Toolbar-Hot.png" />
+    <Image Include="..\..\resources\windows\Toolbar-Normal-Flat.bmp" />
+    <Image Include="..\..\resources\windows\Toolbar-Normal.png" />
+    <Image Include="..\..\resources\windows\UseBlackLevel.png" />
+    <Image Include="..\..\resources\windows\UseWhiteLevel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\resources\CategoryDefinition.xml" />
+    <Xml Include="..\..\resources\MetadataDefinition.xml" />
+    <Xml Include="..\..\resources\MetadataPanel.xsl" />
+    <Xml Include="..\..\resources\MetadataDefinition.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\resources\HelpGuide.rtf" />
+    <None Include="..\..\resources\windows\cursorHand.cur" />
+    <None Include="..\..\resources\windows\cursorZoomIn.cur" />
+    <None Include="..\..\resources\windows\cursorZoomLimit.cur" />
+    <None Include="..\..\resources\windows\cursorZoomOut.cur" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DevPartner_IsInstrumented="0" RESOURCE_FILE="\Documents and Settings\Teis\My Documents\Projekter\Fits\FitsLiberator\resources\windows\FitsLiberator.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

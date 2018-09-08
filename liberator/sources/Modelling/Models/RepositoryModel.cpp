@@ -51,13 +51,12 @@
 //
 // =============================================================================
 #include "Environment.h"
+#include "Text.hpp"
 #include "TextUtils.h"
 #include "RepositoryModel.h"
 
 #include <sstream>
-
-#include <boost/regex.hpp>
-#include <boost/algorithm/string.hpp>
+#include <regex>
 
 // ------------------------------------------------------------------------------------------------
 // Implementation
@@ -65,8 +64,6 @@
 
 using namespace FitsLiberator::Modelling;
 using namespace FitsLiberator::Engine;
-
-using namespace boost::algorithm;
 
 using namespace std;
 
@@ -410,8 +407,7 @@ Void RepositoryModel::serializeListAsRdf( const Keyword* keyword, TiXmlNode* par
 	TiXmlElement* rdfSeq = new TiXmlElement( outer );			// <rdf:Seq>
 
     // Lists need special handling
-    vector<string> items;
-	split(items, keyword->value, is_any_of(";"));
+    auto items = split(keyword->value, ';');
 
     vector<string>::const_iterator i = items.begin();
     while( i != items.end() ) {

@@ -62,14 +62,9 @@
 
 #include "FitsLiberator.h"
 #include "Observer.h"
-#ifdef WINDOWS
-#include <hash_map>
-#else
-#include <ext/hash_map>
-#include "HashFuncs.h"
-#endif
 #include <set>
-#include <boost/thread.hpp>
+#include <unordered_map>
+#include <mutex>
 
 namespace FitsLiberator {
     namespace Modelling {
@@ -78,24 +73,9 @@ namespace FitsLiberator {
         typedef std::set<Observer *>::iterator	ObserversIterator;	///<
         typedef std::set<Model *>::iterator		ModelsIterator;		///<
 
-        #ifdef __GNUC__
-//            struct eqModel { bool operator()(Model * s1, Model * s2) const { return s1 == s2; } };
-//            struct eqObserver { bool operator()(Observer * s1, Observer * s2) const { return s1 == s2; } };
-
-
-
-//
-//            typedef __gnu_cxx::hash_map< Model *, Observers *, __gnu_cxx::hash<Model *>, eqModel > ModelObserverMapping;
-//            typedef __gnu_cxx::hash_map< Observer *, Models, __gnu_cxx::hash<Observer *>, eqObserver > ObserverModelMapping;
-//            typedef __gnu_cxx::hash_map< Observer *, Models, __gnu_cxx::hash<Observer *>, eqObserver>::iterator HashIterator;
-            typedef __gnu_cxx::hash_map< Model *, Observers *> ModelObserverMapping;
-            typedef __gnu_cxx::hash_map< Observer *, Models> ObserverModelMapping;
-            typedef __gnu_cxx::hash_map< Observer *, Models>::iterator HashIterator;
-        #else
-            typedef stdext::hash_map< Model *, Observers * > ModelObserverMapping;
-            typedef stdext::hash_map< Observer *, Models > ObserverModelMapping;
-            typedef stdext::hash_map< Observer *, Models >::iterator HashIterator;
-        #endif
+        typedef std::unordered_map< Model *, Observers * > ModelObserverMapping;
+        typedef std::unordered_map< Observer *, Models > ObserverModelMapping;
+        typedef std::unordered_map< Observer *, Models >::iterator HashIterator;
 
         /**
         * Accumulating Change Manager for the Observer Pattern. This Change Manager
@@ -113,8 +93,8 @@ namespace FitsLiberator {
                 virtual void SendNotifications();
                 
             private:    
-                boost::mutex            lock;
-                ModelObserverMapping    mapping;            ///< Model-Observer mapping.
+                std::mutex              lock;
+                ModelObserverMapping    mapping;             ///< Model-Observer mapping.
                 ObserverModelMapping    notificationList;    ///< List of changed models.
         };
         

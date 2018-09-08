@@ -58,12 +58,6 @@
     #define NULL 0
 #endif
 
-const class {
-        void operator&() const;
-    public:
-        template<class T> operator T*() const { return 0; }
-        template<class C, class T> operator T C::*() const { return 0; }
-} nullptr = {};
 
 #include <string>
 #include <vector>

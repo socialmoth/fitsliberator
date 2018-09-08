@@ -50,9 +50,10 @@
 //   Davide De Martin
 //
 // =============================================================================
+
+#include <functional>
 #include <sstream>
-#include <boost/thread.hpp>
-#include <boost/bind.hpp>
+#include <thread>
 
 #include "Environment.h"
 #include "PlaneView.h"

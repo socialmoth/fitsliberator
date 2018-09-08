@@ -85,7 +85,7 @@
 #include "Preferences.h"
 #include "RepositoryController.h"
 #include "Preferences.h"
-#include <boost/scoped_ptr.hpp>
+#include <memory>
 
 namespace FitsLiberator
 {
@@ -438,7 +438,7 @@ namespace FitsLiberator
 			//The tiling subsystem
 			FitsLiberator::Engine::TileControl& tileControl;
 			
-            boost::shared_ptr<WcsMapper> wcs;
+            std::shared_ptr<WcsMapper> wcs;
 
 			//the saved state
 			FlowControllerState* currentState;

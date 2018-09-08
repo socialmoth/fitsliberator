@@ -26,7 +26,7 @@
 #include <memory.h>
 #include <tchar.h>
 
-#include <boost/shared_ptr.hpp>
+#include <memory>
 
 #include "Environment.h"
 #include "ApplicationWindow.h"

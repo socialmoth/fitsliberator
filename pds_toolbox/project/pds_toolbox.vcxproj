@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D552AB6-04DD-4646-A88F-4674801EFD7F}</ProjectGuid>
+    <RootNamespace>pds_toolbox</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27924.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\binaries\</OutDir>
+    <IntDir>..\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\binaries\</OutDir>
+    <IntDir>..\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\library\lablib;..\library\lablib3;..\library\odlc;..\library\oal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IBM_PC=1;MSDOS_TC=1;PDS_TOOLBOX=1;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DiagnosticsFormat>Caret</DiagnosticsFormat>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\library\lablib;..\library\lablib3;..\library\odlc;..\library\oal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IBM_PC=1;MSDOS_TC=1;PDS_TOOLBOX=1;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DiagnosticsFormat>Caret</DiagnosticsFormat>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\library\lablib3\lablib3.c" />
+    <ClCompile Include="..\library\lablib\errorlib.c" />
+    <ClCompile Include="..\library\lablib\fiolib.c" />
+    <ClCompile Include="..\library\lablib\label.c" />
+    <ClCompile Include="..\library\lablib\labutil.c" />
+    <ClCompile Include="..\library\oal\binrep.c" />
+    <ClCompile Include="..\library\oal\clmdcmp1.c" />
+    <ClCompile Include="..\library\oal\clmdcmp2.c" />
+    <ClCompile Include="..\library\oal\decomp.c" />
+    <ClCompile Include="..\library\oal\oal.c" />
+    <ClCompile Include="..\library\oal\oamalloc.c" />
+    <ClCompile Include="..\library\oal\oa_gif.c" />
+    <ClCompile Include="..\library\oal\obj_l1.c" />
+    <ClCompile Include="..\library\oal\obj_l2.c" />
+    <ClCompile Include="..\library\oal\odlutils.c" />
+    <ClCompile Include="..\library\oal\rprt_err.c" />
+    <ClCompile Include="..\library\oal\stream_l.c" />
+    <ClCompile Include="..\library\oal\struct_l.c" />
+    <ClCompile Include="..\library\oal\writegif.c" />
+    <ClCompile Include="..\library\odlc\ao_nodes.c" />
+    <ClCompile Include="..\library\odlc\a_nodes.c" />
+    <ClCompile Include="..\library\odlc\comments.c" />
+    <ClCompile Include="..\library\odlc\cvtvalue.c" />
+    <ClCompile Include="..\library\odlc\fmtvalue.c" />
+    <ClCompile Include="..\library\odlc\lexan.c" />
+    <ClCompile Include="..\library\odlc\parsact.c" />
+    <ClCompile Include="..\library\odlc\parser.c" />
+    <ClCompile Include="..\library\odlc\prtlabel.c" />
+    <ClCompile Include="..\library\odlc\p_nodes.c" />
+    <ClCompile Include="..\library\odlc\rdlabel.c" />
+    <ClCompile Include="..\library\odlc\syslib.c" />
+    <ClCompile Include="..\library\odlc\toolout.c" />
+    <ClCompile Include="..\library\odlc\utillib.c" />
+    <ClCompile Include="..\library\odlc\v_nodes.c" />
+    <ClCompile Include="..\library\odlc\wrtlabel.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\library\lablib3\lablib3.h" />
+    <ClInclude Include="..\library\lablib\errordef.h" />
+    <ClInclude Include="..\library\lablib\fiodef.h" />
+    <ClInclude Include="..\library\lablib\label.h" />
+    <ClInclude Include="..\library\lablib\labutil.h" />
+    <ClInclude Include="..\library\oal\binrep.h" />
+    <ClInclude Include="..\library\oal\jpeg_c.h" />
+    <ClInclude Include="..\library\oal\oal.h" />
+    <ClInclude Include="..\library\oal\oal_sys.h" />
+    <ClInclude Include="..\library\oal\oamalloc.h" />
+    <ClInclude Include="..\library\oal\odlutils.h" />
+    <ClInclude Include="..\library\oal\stream_h.h" />
+    <ClInclude Include="..\library\oal\stream_l.h" />
+    <ClInclude Include="..\library\oal\toolbox.h" />
+    <ClInclude Include="..\library\odlc\odldef.h" />
+    <ClInclude Include="..\library\odlc\odlinter.h" />
+    <ClInclude Include="..\library\odlc\odlparse.h" />
+    <ClInclude Include="..\library\odlc\parser.h" />
+    <ClInclude Include="..\library\odlc\pdsdef.h" />
+    <ClInclude Include="..\library\odlc\pdsglob.h" />
+    <ClInclude Include="..\library\odlc\sysdef.h" />
+    <ClInclude Include="..\library\odlc\utildef.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

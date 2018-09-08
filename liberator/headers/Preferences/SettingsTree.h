@@ -55,12 +55,7 @@
 #define __SETTINGSTREE_H__
 
 #include "Types.h"
-#ifdef WINDOWS
-	#include <hash_map>
-#else
-	#include <ext/hash_map>
-	#include "HashFuncs.h"
-#endif
+#include <unordered_map>
 
 namespace FitsLiberator {
 	namespace Preferences {
@@ -173,12 +168,8 @@ namespace FitsLiberator {
 				UInt 					size;		///< Number of elements in node.
 		};
 		
-		
-		#ifdef __GNUC__
-			typedef __gnu_cxx::hash_map< String, SettingsNode *> StringSettingsNodeMap;
-        #else
-            typedef stdext::hash_map< String, SettingsNode * > StringSettingsNodeMap;
-        #endif
+        
+        typedef std::unordered_map<String, SettingsNode * > StringSettingsNodeMap;
         
 		/**
 		 * Node for storing an associative list of nodes.

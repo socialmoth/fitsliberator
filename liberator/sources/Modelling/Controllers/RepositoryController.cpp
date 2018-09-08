@@ -51,14 +51,13 @@
 //
 // =============================================================================
 #include "RepositoryController.h"
+#include "Text.hpp"
 #include "TextUtils.h"
 #include "Resources.h"
 
-#include <boost/regex.hpp>
-#include <boost/algorithm/string.hpp>
+#include <regex>
 
 using namespace std;
-using namespace boost::algorithm;
 
 using namespace FitsLiberator;
 using namespace FitsLiberator::Engine;
@@ -146,14 +145,13 @@ ValidationError RepositoryController::parseValue( UInt keywordIndex, String valu
 		return NoError;
 	}
 	else {
-		boost::regex e( formats[keyword->type - 2] );
+		std::regex e( formats[keyword->type - 2] );
 		
 		if( keyword->elements > 1 ) {
-			vector<string> elements;
-            split(elements, value, is_any_of(";"));
+			auto elements = split(value, ';');
 			if( elements.size() == keyword->elements ) {
 				for( Vector<String>::iterator i = elements.begin(); i != elements.end(); i++ ) {
-					if( !boost::regex_match( *i, e ) )
+					if( !std::regex_match( *i, e ) )
 						return (ValidationError)keyword->type;
 				}
 				model.setValue( keywordIndex, value );
@@ -163,7 +161,7 @@ ValidationError RepositoryController::parseValue( UInt keywordIndex, String valu
 				return InvalidElementCount;
 			}
 		}
-		else if( boost::regex_match( value, e ) ) {
+		else if( std::regex_match( value, e ) ) {
 			model.setValue( keywordIndex, value );
 			super::SendNotifications();
 			return NoError;

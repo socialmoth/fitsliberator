@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\odlc">
+      <UniqueIdentifier>{e80213ac-0e2a-4d71-9213-86e98493abe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\oal">
+      <UniqueIdentifier>{815738c8-e437-4561-b05f-0fff7d133628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lablib3">
+      <UniqueIdentifier>{fd65d12a-88a6-4d6c-9396-0f19e07569a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lablib">
+      <UniqueIdentifier>{19aec135-6f74-4126-885a-c425092967d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\odlc">
+      <UniqueIdentifier>{c8024d41-b9a3-4981-84ff-c6df3c15e3a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\oal">
+      <UniqueIdentifier>{584b7722-3eae-4263-ae83-199b092ce33b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lablib3">
+      <UniqueIdentifier>{19459a58-148c-4eee-9835-735bb64e16d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lablib">
+      <UniqueIdentifier>{11c64e4a-880b-43ff-bb31-5284e4255f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\library\odlc\a_nodes.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\ao_nodes.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\comments.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\cvtvalue.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\fmtvalue.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\lexan.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\p_nodes.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\parsact.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\parser.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\prtlabel.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\rdlabel.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\syslib.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\toolout.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\utillib.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\v_nodes.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\odlc\wrtlabel.c">
+      <Filter>Source Files\odlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\binrep.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\clmdcmp1.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\clmdcmp2.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\decomp.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\oa_gif.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\oal.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\oamalloc.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\obj_l1.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\obj_l2.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\odlutils.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\rprt_err.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\stream_l.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\struct_l.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\oal\writegif.c">
+      <Filter>Source Files\oal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\lablib3\lablib3.c">
+      <Filter>Source Files\lablib3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\lablib\errorlib.c">
+      <Filter>Source Files\lablib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\lablib\fiolib.c">
+      <Filter>Source Files\lablib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\lablib\label.c">
+      <Filter>Source Files\lablib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\library\lablib\labutil.c">
+      <Filter>Source Files\lablib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\library\odlc\odldef.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\odlinter.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\odlparse.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\parser.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\pdsdef.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\pdsglob.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\sysdef.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\odlc\utildef.h">
+      <Filter>Header Files\odlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\binrep.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\jpeg_c.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\oal.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\oal_sys.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\oamalloc.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\odlutils.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\stream_h.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\stream_l.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\oal\toolbox.h">
+      <Filter>Header Files\oal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\lablib3\lablib3.h">
+      <Filter>Header Files\lablib3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\lablib\errordef.h">
+      <Filter>Header Files\lablib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\lablib\fiodef.h">
+      <Filter>Header Files\lablib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\lablib\label.h">
+      <Filter>Header Files\lablib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\library\lablib\labutil.h">
+      <Filter>Header Files\lablib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -55,6 +55,9 @@
 #define __TEXT_HPP__
 
 #include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
 
 namespace FitsLiberator {
 #ifdef UNICODE
@@ -105,6 +108,21 @@ namespace FitsLiberator {
             count -= 1;
         }
         return s;
+    }
+
+    template<typename CharT>
+    std::vector<std::basic_string<CharT>>
+    split(std::basic_string<CharT> text, CharT delimiter)
+    {
+        auto tokens = std::vector<std::basic_string<CharT>>();
+        auto stream = std::basic_istringstream<CharT>(text);
+        auto token  = std::string();
+
+        while (std::getline(stream, token, delimiter)) {
+            tokens.push_back(std::move(token));
+        }
+
+        return tokens;
     }
 }
 

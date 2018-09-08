@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{956AF386-9BA3-4B22-86C3-1EC38F31B8D1}</ProjectGuid>
+    <RootNamespace>cfitsio</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27924.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\binaries\</OutDir>
+    <IntDir>..\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\binaries\</OutDir>
+    <IntDir>..\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\cfitsio;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\library\buffers.c" />
+    <ClCompile Include="..\library\cfileio.c" />
+    <ClCompile Include="..\library\checksum.c" />
+    <ClCompile Include="..\library\compress.c" />
+    <ClCompile Include="..\library\drvrfile.c" />
+    <ClCompile Include="..\library\drvrmem.c" />
+    <ClCompile Include="..\library\drvrnet.c" />
+    <ClCompile Include="..\library\drvrsmem.c" />
+    <ClCompile Include="..\library\editcol.c" />
+    <ClCompile Include="..\library\edithdu.c" />
+    <ClCompile Include="..\library\eval_f.c" />
+    <ClCompile Include="..\library\eval_l.c" />
+    <ClCompile Include="..\library\eval_y.c" />
+    <ClCompile Include="..\library\fitscore.c" />
+    <ClCompile Include="..\library\fits_hcompress.c" />
+    <ClCompile Include="..\library\fits_hdecompress.c" />
+    <ClCompile Include="..\library\getcol.c" />
+    <ClCompile Include="..\library\getcolb.c" />
+    <ClCompile Include="..\library\getcold.c" />
+    <ClCompile Include="..\library\getcole.c" />
+    <ClCompile Include="..\library\getcoli.c" />
+    <ClCompile Include="..\library\getcolj.c" />
+    <ClCompile Include="..\library\getcolk.c" />
+    <ClCompile Include="..\library\getcoll.c" />
+    <ClCompile Include="..\library\getcols.c" />
+    <ClCompile Include="..\library\getcolsb.c" />
+    <ClCompile Include="..\library\getcolui.c" />
+    <ClCompile Include="..\library\getcoluj.c" />
+    <ClCompile Include="..\library\getcoluk.c" />
+    <ClCompile Include="..\library\getkey.c" />
+    <ClCompile Include="..\library\group.c" />
+    <ClCompile Include="..\library\grparser.c" />
+    <ClCompile Include="..\library\histo.c" />
+    <ClCompile Include="..\library\imcompress.c" />
+    <ClCompile Include="..\library\iraffits.c" />
+    <ClCompile Include="..\library\modkey.c" />
+    <ClCompile Include="..\library\pliocomp.c" />
+    <ClCompile Include="..\library\putcol.c" />
+    <ClCompile Include="..\library\putcolb.c" />
+    <ClCompile Include="..\library\putcold.c" />
+    <ClCompile Include="..\library\putcole.c" />
+    <ClCompile Include="..\library\putcoli.c" />
+    <ClCompile Include="..\library\putcolj.c" />
+    <ClCompile Include="..\library\putcolk.c" />
+    <ClCompile Include="..\library\putcoll.c" />
+    <ClCompile Include="..\library\putcols.c" />
+    <ClCompile Include="..\library\putcolsb.c" />
+    <ClCompile Include="..\library\putcolu.c" />
+    <ClCompile Include="..\library\putcolui.c" />
+    <ClCompile Include="..\library\putcoluj.c" />
+    <ClCompile Include="..\library\putcoluk.c" />
+    <ClCompile Include="..\library\putkey.c" />
+    <ClCompile Include="..\library\quantize.c" />
+    <ClCompile Include="..\library\region.c" />
+    <ClCompile Include="..\library\ricecomp.c" />
+    <ClCompile Include="..\library\scalnull.c" />
+    <ClCompile Include="..\library\speed.c" />
+    <ClCompile Include="..\library\swapproc.c" />
+    <ClCompile Include="..\library\wcssub.c" />
+    <ClCompile Include="..\library\wcsutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\library\compress.h" />
+    <ClInclude Include="..\library\drvrgsiftp.h" />
+    <ClInclude Include="..\library\drvrsmem.h" />
+    <ClInclude Include="..\library\eval_defs.h" />
+    <ClInclude Include="..\library\eval_tab.h" />
+    <ClInclude Include="..\library\fitsio.h" />
+    <ClInclude Include="..\library\fitsio2.h" />
+    <ClInclude Include="..\library\group.h" />
+    <ClInclude Include="..\library\grparser.h" />
+    <ClInclude Include="..\library\longnam.h" />
+    <ClInclude Include="..\library\region.h" />
+    <ClInclude Include="..\library\ricecomp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
